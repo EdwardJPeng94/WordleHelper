@@ -1,12 +1,5 @@
 #Wordle Helper Edward Peng
 
-import tkinter as tk
-
-#GUI
-# window = tk.Tk()
-# greeting = tk.Label(text="Hello, Tkinter")
-# greeting.pack()
-
 #designate variables
 words = []
 wordsCopy=[]
@@ -55,7 +48,6 @@ for i in range(5):
     # print("Final answer: ")
     print(final)
 
-    #TODO
     #go through the list, 
     for word in words:
         check=0
@@ -77,12 +69,16 @@ for i in range(5):
                 if final[x] != word[x]:
                     check=1
                     continue
+        #TODO
+        #remove words based on yellow letters
 
         #final step to remove words from list
         if(check==0):
             if word in wordsCopy:
                 continue
             wordsCopy.append(word)
+
+        
         
     words=wordsCopy.copy()
     wordsCopy=[]
